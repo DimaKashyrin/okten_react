@@ -1,0 +1,28 @@
+
+.card-box {
+    width: 20%;
+    border: 1px solid lightblue;
+    padding-top: 20px;
+
+}
+.image-box {
+    text-align: center;
+    height: 375px;
+}
+.image {
+   width: 180px;
+}
+.name-box {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.age-box {
+    text-align: center;
+}
+.info-box {
+    padding: 10px;
+
+}
