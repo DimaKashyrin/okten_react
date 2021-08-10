@@ -1,0 +1,11 @@
+
+.wrap {
+    width: 95%;
+    background-color: aliceblue;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 25px;
+}
