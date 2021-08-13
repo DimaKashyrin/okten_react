@@ -1,0 +1,4 @@
+.wrap-comments {
+    display: flex;
+    flex-wrap: wrap;
+}

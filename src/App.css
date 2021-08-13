@@ -1,0 +1,9 @@
+h2 {
+    text-align: center;
+}
+.sub-task {
+    font-size: 23px;
+    color: brown;
+    background-color: #f3f3f3;
+    padding-left: 30px;
+}

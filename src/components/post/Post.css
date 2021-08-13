@@ -1,0 +1,17 @@
+.post-card {
+    border: 1px solid lightgray;
+    width: 350px;
+    margin: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.post-body {
+    text-align: justify;
+    flex: 1 0 auto;
+}
+.footer-inform {
+    text-align: end;
+    color: lightgray;
+    flex: 0 0 auto;
+}

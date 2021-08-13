@@ -1,0 +1,24 @@
+.card-comments {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid lightgray;
+    width: 350px;
+    padding: 10px;
+    margin: 20px;
+}
+.email-comments {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.body-comments {
+    text-align: justify;
+    margin-bottom: 20px;
+}
+.footer-comments {
+    background-color: #f3f3f3;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+    margin-bottom: 10px;
+}
