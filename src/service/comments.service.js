@@ -7,10 +7,8 @@ let config = {
 let axiosInstance = axios.create(config);
 
 
-const getComments = () => {
-  return axiosInstance.get('');
+
+const getCommentsPost = (postId) => {
+    return axiosInstance.get(`/?postId=${postId}`);
 }
-const getComment = (id) => {
-    return axiosInstance.get(`/${id}`);
-}
-export {getComments, getComment}
+export {getCommentsPost}
