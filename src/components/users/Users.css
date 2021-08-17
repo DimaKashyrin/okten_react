@@ -1,0 +1,19 @@
+.wrap-users {
+    border:1px solid red;
+    margin: 20px;
+    display: flex;
+}
+.wrap-users > div {
+    width: 300px;
+}
+.selected-user-box {
+    border: 1px solid blue;
+    margin: 10px;
+    position: fixed;
+    right: 30%;
+    top:15%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
