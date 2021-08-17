@@ -1,0 +1,37 @@
+.wrap {
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+
+}
+.posts-box {
+    width: 695px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.single-card-post {
+    position: fixed;
+    top:5%;
+    right: 20px;
+    width: 300px;
+    height: 250px;
+    border: 1px solid green;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px;
+    border-radius: 10px;
+}
+.single-title{
+    font-weight: bold;
+    text-align: center;
+}
+.single-body {
+    text-align: justify;
+}
+.box-inform {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #f3f6f7;
+}

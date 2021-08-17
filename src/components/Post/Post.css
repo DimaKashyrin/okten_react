@@ -1,0 +1,21 @@
+.post-card {
+    width: 300px;
+    border: 1px solid green;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.header-post {
+    text-align: center;
+    background-color: #d7e6ea;
+}
+.title-post {
+    text-align: center;
+    font-weight: bold;
+}
+.btn-box {
+    text-align: end;
+
+}

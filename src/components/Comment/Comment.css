@@ -1,0 +1,15 @@
+.comments-card {
+    border: 1px solid blue;
+    width: 200px;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    font-weight: bold;
+}
+.comments-title {
+    text-align: center;
+}

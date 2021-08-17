@@ -1,0 +1,40 @@
+.wrap-comments {
+    display: flex;
+    margin: 10px;
+}
+.comments-box {
+    width: 75%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.single-comment-box {
+    width: 25%;
+    position: relative;
+}
+.single-comment-card {
+    width: 300px;
+    border: 1px solid blue;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: fixed;
+    top:55%;
+    right:10px;
+    border-radius: 10px;
+}
+.comment-name{
+    font-weight: bold;
+    text-align: center;
+}
+.comment-email {
+    text-align: center;
+}
+.comment-body {
+    text-align: justify;
+}
+.comment-inform {
+    display: flex;
+    justify-content: space-between;
+}
