@@ -1,0 +1,19 @@
+form {
+    width: 270px;
+    margin: 20px;
+    padding: 10px;
+}
+fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 250px;
+    height: 280px;
+}
+input {
+    height: 25px;
+}
+fieldset > input[type=submit] {
+    margin-top: 30px;
+    border-radius: 5px;
+}

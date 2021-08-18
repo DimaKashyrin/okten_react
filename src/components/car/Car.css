@@ -1,0 +1,9 @@
+.car-card {
+    border: 1px solid silver;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px;
+    width: 200px;
+}

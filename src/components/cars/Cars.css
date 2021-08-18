@@ -1,0 +1,6 @@
+.wrap-cars {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    margin-left: 45px;
+}
