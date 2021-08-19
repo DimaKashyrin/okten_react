@@ -3,7 +3,28 @@
     margin: 10px;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
     padding: 10px;
     width: 200px;
+}
+.title {
+    text-align: center;
+    background-color: lightgray;
+}
+
+.btn-box{
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    height: 30px;
+    width: 100%;
+}
+.car-inform-box {
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+
+}
+.btn-box > button {
+    width: 70px;
 }

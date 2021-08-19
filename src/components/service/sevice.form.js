@@ -14,4 +14,26 @@ const getCars = () => {
    return  fetch('http://195.72.146.25/api/v1/cars')
         .then(value => value.json())
 }
-export {addCar,getCars}
+const delCar = (id) => {
+     fetch(`http://195.72.146.25/api/v1/cars/${id}`, {
+        method: 'DELETE'
+   }).then();
+}
+
+const updateCar = ({id},{model,price,year}) => {
+    fetch(`http://195.72.146.25/api/v1/cars/${id}`, {
+        method: 'PATCH',
+        body: JSON.stringify({
+            model: model,
+            price:price,
+            year:year
+        }),
+        headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+        },
+    })
+        .then((response) => response.json())
+        .then((json) => console.log(json));
+
+}
+export {addCar, getCars, delCar, updateCar}
