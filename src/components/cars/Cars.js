@@ -1,4 +1,4 @@
-import {getCars, delCar} from "../service/sevice.form";
+import {getCars, delCar} from "../service/service.form";
 import {useEffect, useState} from "react";
 import Car from "../car/Car";
 import './Cars.css';

@@ -1,6 +1,6 @@
 import './Form.css';
 import {createRef, useState} from "react";
-import {addCar,updateCar} from "../service/sevice.form";
+import {addCar,updateCar} from "../service/service.form";
 import Cars from "../cars/Cars";
 
 
