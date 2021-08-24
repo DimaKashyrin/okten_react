@@ -1,0 +1,16 @@
+.wrap-app {
+    padding: 20px;
+    display: flex;
+    gap: 15px;
+    background-color: lightgray;
+}
+.wrap-app a {
+    text-decoration: none;
+}
+.wrap-app a:hover {
+    color: #817edb;
+}
+.wrap-list {
+    padding: 20px;
+    background-color: aliceblue;
+}

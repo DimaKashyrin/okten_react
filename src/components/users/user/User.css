@@ -1,0 +1,9 @@
+.card-wrap {
+    border: 1px solid lightgreen;
+    width: 300px;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
