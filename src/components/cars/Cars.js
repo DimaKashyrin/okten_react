@@ -7,7 +7,7 @@ export default function Cars({editCar}) {
     let [cars, setCars] =useState([]);
     useEffect(()=> {
         getCars().then(value => setCars([...value]))
-    })
+    },[])
 
     const selectedCarDel = (id) =>{
         delCar(id)

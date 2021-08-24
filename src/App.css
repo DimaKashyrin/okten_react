@@ -1,0 +1,12 @@
+ .wrap-menu {
+  height: 60px;
+  padding: 20px;
+  background-color: lightgray;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+ }
+ .wrap-menu a {
+  text-decoration: none;
+ }

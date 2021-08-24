@@ -1,6 +1,7 @@
 .wrap-cars {
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
-    flex-direction: column-reverse;
-    margin-left: 45px;
+    margin: 10px;
+    gap: 10px;
 }

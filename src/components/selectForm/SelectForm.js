@@ -1,10 +1,11 @@
-import './Form.css';
-import {createRef, useState} from "react";
-import {addCar,updateCar} from "../service/service.form";
-// import Cars from "../cars/Cars";
-
-
-export default function Form() {
+import {createRef, useEffect, useState} from "react";
+import {addCar, getCars, updateCar} from "../service/service.form";
+import './SelectForm.css'
+export default function SelectForm() {
+    let [cars, setCars] =useState([]);
+    useEffect(()=> {
+        getCars().then(value => setCars([...value]))
+    },[])
 
     let form = createRef();
 
@@ -23,7 +24,9 @@ export default function Form() {
     let onInputtingYear = (e) => {
         setYear(e.target.value);
     }
-
+    const onChange = (e) => {
+        console.log(e.target)
+    }
     const onSubmitForm = (e) => {
         e.preventDefault();
         let tempCar = {model,price,year};
@@ -48,9 +51,17 @@ export default function Form() {
     //     setYear(form.current.year.value = findCar.year);
     //     setEditCar(findCar);
     // };
-
     return(
-        <div>
+        <div className={'wrap-forms'}>
+            <form className={'selForm'}>
+                <select onChange={onChange}>
+                    <option value="1" defaultValue >choose car</option>
+                    {
+                        cars.map(value => <option key={value.id} value={value}>{value.model}</option>)
+                    }
+
+                </select>
+            </form>
             <form onSubmit={onSubmitForm} ref={form}>
                 <fieldset>
                     <legend>&nbsp; Add car &nbsp;</legend>

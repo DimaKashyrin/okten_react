@@ -1,17 +1,17 @@
 import './Car.css'
 export default function Car({
-    item,
-    item:{id,model,price,year},
-    selectedCarDel,
-    selectedCarEdit},
+    // item,
+    item:{id,model,price,year}})
+    // selectedCarDel,
+    // selectedCarEdit},
 
-) {
-    let clickDel = () => {
-        return selectedCarDel(id);
-    }
-    let clickEdit = () => {
-        return selectedCarEdit(item);
-    }
+{
+    // let clickDel = () => {
+    //     return selectedCarDel(id);
+    // }
+    // let clickEdit = () => {
+    //     return selectedCarEdit(item);
+    // }
 
     return(
         <div className={'car-card'}>
@@ -22,11 +22,11 @@ export default function Car({
                 <div>year: <strong>{year}</strong></div>
             </div>
 
-            <div className={'btn-box'}>
-                <button onClick={clickEdit}>edit</button>
+            {/*<div className={'btn-box'}>*/}
+            {/*    <button onClick={clickEdit}>edit</button>*/}
 
-                <button onClick={clickDel}>delete</button>
-            </div>
+            {/*    <button onClick={clickDel}>delete</button>*/}
+            {/*</div>*/}
         </div>
     )
 
