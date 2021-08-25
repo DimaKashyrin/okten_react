@@ -1,8 +1,12 @@
 import {createRef, useEffect, useState} from "react";
-import {addCar, getCars, updateCar} from "../service/service.form";
+import {getCars, updateCar} from "../service/service.form";
 import './SelectForm.css'
+import Option from "./option/Option";
+
 export default function SelectForm() {
+
     let [cars, setCars] =useState([]);
+
     useEffect(()=> {
         getCars().then(value => setCars([...value]))
     },[])
@@ -12,8 +16,8 @@ export default function SelectForm() {
     let [model, setModel] = useState('');
     let [price, setPrice] = useState('');
     let [year, setYear] = useState('');
-    let [car,setCar] = useState({});
-    let [editCar,setEditCar] = useState({});
+
+    let [carId,setCarID] = useState('');
 
     let onInputtingModel = (e) => {
         setModel(e.target.value);
@@ -24,47 +28,54 @@ export default function SelectForm() {
     let onInputtingYear = (e) => {
         setYear(e.target.value);
     }
-    const onChange = (e) => {
-        console.log(e.target)
-    }
+
     const onSubmitForm = (e) => {
         e.preventDefault();
-        let tempCar = {model,price,year};
-        car=tempCar;
 
-        if(Object.keys(editCar).length !== 0){
-            updateCar(editCar,car);
-            setEditCar({})
-        }else {
-            setCar({tempCar});
-            addCar(car);
-        }
+        let editCar = {model,price,year};
+        updateCar(carId,editCar);
 
         setModel(form.current.model.value = '');
         setPrice(form.current.price.value = '');
         setYear(form.current.year.value = '');
+    }
+
+    let findCar = (findCar) => {
+
+        setModel(form.current.model.value = findCar.model);
+        setPrice(form.current.price.value = findCar.price);
+        setYear(form.current.year.value = findCar.year);
+
+        setCarID(findCar.id);
+
+    };
+
+    let onChange = (e) => {
+        let chooseId = +(e.target.value);
+        let chooseCar = cars.find((value) => value.id === chooseId);
+        findCar(chooseCar);
 
     }
-    // let findCar = (findCar) => {
-    //     setModel(form.current.model.value = findCar.model);
-    //     setPrice(form.current.price.value = findCar.price);
-    //     setYear(form.current.year.value = findCar.year);
-    //     setEditCar(findCar);
-    // };
+
     return(
         <div className={'wrap-forms'}>
+
             <form className={'selForm'}>
                 <select onChange={onChange}>
-                    <option value="1" defaultValue >choose car</option>
+                    <option defaultValue={true} >CHOOSE CAR</option>
                     {
-                        cars.map(value => <option key={value.id} value={value}>{value.model}</option>)
+                        cars.map(value => <Option
+                            item={value}
+                            key={value.id}
+                        />)
                     }
 
                 </select>
             </form>
+
             <form onSubmit={onSubmitForm} ref={form}>
                 <fieldset>
-                    <legend>&nbsp; Add car &nbsp;</legend>
+                    <legend>&nbsp; UPDATE CAR &nbsp;</legend>
                     <input
                         type="text"
                         name={'model'}
@@ -86,7 +97,8 @@ export default function SelectForm() {
                         value={year}
                         onInput={onInputtingYear}
                     />
-                    <input type="submit" value={'add'}/>
+                    <div> iD # {carId}</div>
+                    <input type="submit" value={'edit'}/>
                 </fieldset>
             </form>
         </div>

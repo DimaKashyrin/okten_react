@@ -1,8 +1,6 @@
 import './Form.css';
 import {createRef, useState} from "react";
-import {addCar,updateCar} from "../service/service.form";
-// import Cars from "../cars/Cars";
-
+import {addCar} from "../service/service.form";
 
 export default function Form() {
 
@@ -11,8 +9,6 @@ export default function Form() {
     let [model, setModel] = useState('');
     let [price, setPrice] = useState('');
     let [year, setYear] = useState('');
-    let [car,setCar] = useState({});
-    let [editCar,setEditCar] = useState({});
 
     let onInputtingModel = (e) => {
         setModel(e.target.value);
@@ -26,28 +22,15 @@ export default function Form() {
 
     const onSubmitForm = (e) => {
         e.preventDefault();
-        let tempCar = {model,price,year};
-        car=tempCar;
 
-        if(Object.keys(editCar).length !== 0){
-            updateCar(editCar,car);
-            setEditCar({})
-        }else {
-            setCar({tempCar});
-            addCar(car);
-        }
+        let newCar = {model,price,year};
+        addCar(newCar);
 
         setModel(form.current.model.value = '');
         setPrice(form.current.price.value = '');
         setYear(form.current.year.value = '');
 
     }
-    // let findCar = (findCar) => {
-    //     setModel(form.current.model.value = findCar.model);
-    //     setPrice(form.current.price.value = findCar.price);
-    //     setYear(form.current.year.value = findCar.year);
-    //     setEditCar(findCar);
-    // };
 
     return(
         <div>

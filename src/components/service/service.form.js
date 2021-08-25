@@ -17,12 +17,12 @@ const getCars = () => {
         .then(value => value.json())
 }
 const delCar = (id) => {
-     fetch(`${url}/${id}`, {
+     fetch(`${url}${id}`, {
         method: 'DELETE'
    }).then();
 }
 
-const updateCar = ({id},{model,price,year}) => {
+const updateCar = (id,{model,price,year}) => {
     fetch(`${url}/${id}`, {
         method: 'PATCH',
         body: JSON.stringify({
