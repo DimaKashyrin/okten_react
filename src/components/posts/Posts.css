@@ -1,0 +1,8 @@
+.post-list {
+    flex-basis: 80%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.post-details-wrap {
+    position: relative;
+}

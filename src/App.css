@@ -1,5 +1,7 @@
+
 .main-menu {
     height: 60px;
+    flex-basis: 50%;
     background-color: lightgray;
     display: flex;
     align-items: center;

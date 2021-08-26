@@ -1,26 +1,29 @@
 import './App.css';
 import Users from "./components/users/Users";
+import Posts from "./components/posts/Posts";
 import {
     BrowserRouter as Router,
     Route,
-    Link
+    Link,
+    Switch
 } from "react-router-dom";
 
 function App() {
-  return (
-    <Router>
-      <div className={''}>
-        <div className={'main-menu'}>
-            <Link to={'/'}>reset</Link>
-            <Link to={'/users'}>USERS</Link>
-            <Link to={'/posts'}>POSTS</Link>
-        </div>
-        <div>
-            <Route path={'/users'} component={Users}/>
-        </div>
-      </div>
-    </Router>
-  );
+    return (
+        <Router>
+            <div className={'main-menu'}>
+                <Link to={'/'}>reset</Link>
+                <Link to={'/users'}>USERS</Link>
+                <Link to={'/posts'}>POSTS</Link>
+            </div>
+            <div>
+                <Switch>
+                    <Route path={'/users'} component={Users}/>
+                    <Route path={'/posts'} component={Posts}/>
+                </Switch>
+            </div>
+        </Router>
+    );
 }
 
 export default App;

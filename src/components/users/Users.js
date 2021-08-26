@@ -17,13 +17,16 @@ export default function Users(props) {
 
     return(
         <div className={'list-wrap'}>
-            {
-                users.map(value => <User item={value} key={value.id}/>)
-
-            }
-            <Route path={`${url}/:id`} render={(props =>{
-                return <UserDetails{...props}/>
-            })} />
+            <div className={'list-users'}>
+                {
+                    users.map(value => <User item={value} key={value.id}/>)
+                }
+            </div>
+            <div className={'user-details'}>
+                <Route path={`${url}/:id`} render={(props =>{
+                    return <UserDetails{...props}/>
+                })} />
+            </div>
         </div>
     )
 }

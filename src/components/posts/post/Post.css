@@ -1,0 +1,29 @@
+.card-post {
+    width: 250px;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #96a7ef;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    border-radius: 10px;
+}
+.position {
+    position: fixed;
+    top:35%;
+    right:20px
+}
+.post-id {
+    text-align: center;
+}
+.post-title {
+    text-align: center;
+    font-weight: bold;
+}
+.link-box {
+    text-align: end;
+}
+.link-box a {
+    text-decoration: none;
+}
