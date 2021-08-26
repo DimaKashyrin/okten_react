@@ -1,0 +1,11 @@
+.main-menu {
+    height: 60px;
+    background-color: lightgray;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-left: 20px;
+}
+.main-menu a {
+    text-decoration: none;
+}
