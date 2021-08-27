@@ -3,12 +3,11 @@ import reducer from "./reducers/reducer";
 
 function App() {
 
-    let [state,dispatch] = useReducer(reducer, {a:0});
-    let {a} = state;
+    let [{a},dispatch] = useReducer(reducer, {a:0});
 
     return (
           <div>
-                <h1>'STATE' ==>  value =  {a}</h1>
+                <h1>'STATE' ==> value = {a}</h1>
                 <button onClick={() => dispatch({obj:'1', act:'+'})}>increment +10</button>
                 <button onClick={() => dispatch({obj:'1', act:'-'})}>decrement -2</button>
           </div>
