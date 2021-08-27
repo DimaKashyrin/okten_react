@@ -7,13 +7,15 @@ function App() {
 
     return (
           <div>
-                <h1> Object A  ==>  value =  {a}</h1>
+                <h1>Object A ==> value = {a}</h1>
                 <button onClick={() => dispatch({obj:'a', act:'+'})}>increment +5</button>
                 <button onClick={() => dispatch({obj:'a', act:'-'})}>decrement -5</button>
-                <h1>Object B ==>  value =  {b}</h1>
+
+                <h1>Object B ==> value = {b}</h1>
                 <button onClick={() => dispatch({obj:'b', act:'+'})}>increment +10</button>
                 <button onClick={() => dispatch({obj:'b', act:'-'})}>decrement -10</button>
-                <h1>Object C ==>  value =  {c}</h1>
+
+                <h1>Object C ==> value = {c}</h1>
                 <button onClick={() => dispatch({obj:'c', act:'+'})}>increment +20</button>
                 <button onClick={() => dispatch({obj:'c', act:'-'})}>decrement -20</button>
           </div>
