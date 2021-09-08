@@ -1,0 +1,8 @@
+.Hdr-list {
+    height: 140px;
+    display: flex;
+    position: relative;
+    gap: 13px;
+    padding: 10px 25px;
+    background-color: white;
+}

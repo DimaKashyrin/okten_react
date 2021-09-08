@@ -1,0 +1,21 @@
+.app-wrap {
+    width: 1280px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    display: flex;
+    background: url("../src/images/fon.jpg") no-repeat;
+    background-size: 100%;
+    padding: 60px 90px;
+}
+.main-section {
+    background-color: white;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.centre-box {
+    display: flex;
+}
+.article-box {
+    padding-left: 12px;
+    width: 282px;
+}

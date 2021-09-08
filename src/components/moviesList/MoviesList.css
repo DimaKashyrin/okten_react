@@ -1,0 +1,23 @@
+.trending-list {
+    display: flex;
+    gap: 13px;
+    width: 100%;
+}
+.trending-box {
+    padding-left: 25px;
+    background-color: white;
+}
+.trending-title {
+    margin-bottom: 10px;
+    display: flex;
+    gap: 17px;
+    font-weight: bold;
+    font-size: 14px;
+    color: gray;
+}
+.title-movies-list {
+}
+.trending-title > a {
+    text-decoration: none;
+    color: #516ea1;
+}

@@ -1,0 +1,36 @@
+.card-movies {
+    height: 180px;
+    width: 85px;
+    text-decoration: none;
+    color: slategrey;
+    box-sizing: border-box;
+}
+.card-title{
+    text-align: center;
+    font-size: 10px;
+    font-weight: bold;
+    word-wrap: break-word;
+    padding: 0 7px;
+}
+.post-img {
+    height: 135px;
+    border-radius: 10px;
+    width: 85px;
+}
+.nav-section {
+    width: 180px;
+    background-color: #314276;
+    color: white;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.nav-section ul {
+    list-style: none;
+}
+.nav-section ul li {
+    padding-left: 20px;
+}
+.maim-section {
+    width: 900px;
+    background-color: azure;
+}

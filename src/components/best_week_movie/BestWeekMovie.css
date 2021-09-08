@@ -1,0 +1,11 @@
+.best-week-movie {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    text-decoration: none;
+    color: black;
+}
+.best-name-box {
+    display: flex;
+    gap:20px;
+}

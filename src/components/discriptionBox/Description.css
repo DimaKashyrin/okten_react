@@ -1,0 +1,67 @@
+.description {
+    height: 184px;
+    width: 575px;
+    padding-left: 25px;
+    margin: 20px 0;
+    display: flex;
+}
+.description-image-box {
+    width: 280px;
+}
+.description-image-box > img {
+    width: 280px;
+    height: 180px;
+    border-radius: 10px;
+}
+.description-body {
+    width: 100%;
+    padding: 5px 15px;
+}
+.description-title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+.description-name {
+    font-weight: bold;
+    font-size: 14px;
+    width: 180px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.description-rating {
+    color: #5d7fc1;
+    font-weight: bold;
+}
+.description-max-rating {
+    color: #363942;
+    font-weight: bold;
+}
+.description-sub-inform {
+    font-size: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.genres-box {
+    display: flex;
+    gap: 5px;
+}
+.description-text {
+    height: 80px;
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 8px;
+}
+.btn-buy {
+    font-size: 14px;
+    font-weight: 700;
+    width: 80px;
+    border: 1px solid silver;
+    padding: 4px;
+    border-radius: 5px;
+    cursor: pointer;
+
+}

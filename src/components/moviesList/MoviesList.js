@@ -1,20 +1,26 @@
 import {useEffect} from "react";
-import {loadGenresServer, loadMoviesServer} from "../../services/services.movies";
+import {loadMoviesServer} from "../../services/services.movies";
 import {useDispatch, useSelector} from "react-redux";
+import MoviesListCard from "../moviesListCard/MoviesListCard";
+import './MoviesList.css'
 
 export default function MoviesList() {
-  let state = useSelector(state => state)
+  let {movies} = useSelector(state => state)
   let dispatch = useDispatch()
   useEffect(()=> {
     dispatch(loadMoviesServer())
   },[])
-  useEffect(()=>{
-    dispatch(loadGenresServer())
-  },[])
-  console.log(state)
   return(
-    <div>
-    
-    </div>
+    <div className={'trending-box'}>
+      <div className={'trending-title'}>
+        <span className={'title-movies-list'}>Trending & Noteworthy</span>
+        <a href="#">See all</a>
+      </div>
+      <div className={'trending-list'}>
+        {
+          movies.map(value => <MoviesListCard item={value} key={value.id}/>)
+        }
+      </div>
+      </div>
   )
 }
