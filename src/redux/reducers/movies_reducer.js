@@ -46,14 +46,13 @@ const reducer = (state = initialState,action) => {
     case LOAD_BEST_WEEK_MOVIE:
       let sortArr = [...action.payload].sort(
         function(a, b) {
-        return  b.vote_count - a.vote_count
+        return  b.vote_count - a.vote_count;
         }
       )
       let prepareBestMovies = sortArr.slice(0,9)
       return {...state, bestWeekMovies:[...prepareBestMovies]}
     
     case LOAD_GENRES_LIST:
-      console.log(action.payload);
       return {...state, genresList: [...action.payload]}
     
     default:

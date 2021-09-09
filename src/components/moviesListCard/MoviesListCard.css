@@ -6,11 +6,13 @@
     box-sizing: border-box;
 }
 .card-title{
+    height: 30px;
     text-align: center;
     font-size: 10px;
     font-weight: bold;
     word-wrap: break-word;
     padding: 0 7px;
+    overflow: hidden;
 }
 .post-img {
     height: 135px;

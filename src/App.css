@@ -4,7 +4,6 @@
     margin: 0 auto;
     display: flex;
     background: url("../src/images/fon.jpg") no-repeat;
-    background-size: 100%;
     padding: 60px 90px;
 }
 .main-section {

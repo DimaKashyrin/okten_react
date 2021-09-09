@@ -6,7 +6,7 @@ import './MoviesList.css'
 
 export default function MoviesList() {
   let {movies} = useSelector(state => state)
-  let dispatch = useDispatch()
+  let dispatch = useDispatch();
   useEffect(()=> {
     dispatch(loadMoviesServer())
   },[])

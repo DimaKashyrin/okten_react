@@ -25,7 +25,6 @@ const getHdr4k = (payload) => {
   }
 }
 const getDescription = (payload) => {
-
   return{
     type:GET_DESCRIPTION,payload
   }
@@ -46,7 +45,6 @@ const loadBestWeekMovies = (payload) => {
   }
 }
 const loadGenresList = (payload) => {
-  console.log('flag 1')
   return{
     type:LOAD_GENRES_LIST,payload
   }

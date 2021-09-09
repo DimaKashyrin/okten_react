@@ -9,7 +9,6 @@ export default function GenresList() {
   useEffect(()=>{
     dispatch(getGenresList())
   },[])
-  console.log(genresList)
   return(
     <select name={'time'} id="#" className={'search-selected'}>
       <option value="" defaultValue>Genres</option>

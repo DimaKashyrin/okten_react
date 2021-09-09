@@ -27,7 +27,7 @@ const loadMoviesBy4k = () => async (dispatch) => {
 const loadMoviesDescription = (params) => async (dispatch) => {
   const {data:{results}} = await instance.get('/discover/movie')
   const {data:{genres}} = await instance.get('/genre/movie/list')
-  let selectedMovie = results.find(item => item.id === +params.id);
+  let selectedMovie = results.find(item => item.id === +params);
   let prepareObj = {...selectedMovie,genres:[]};
   genres.forEach(item => {
     if(selectedMovie.genre_ids[0] === item.id){
@@ -59,7 +59,6 @@ const getBestWeekMovies = () => async (dispatch) => {
 }
 const getGenresList = () => async (dispatch) => {
   const response = await instance.get('/genre/movie/list')
-  console.log(response)
   dispatch(loadGenresList(response.data.genres))
 }
 export {
